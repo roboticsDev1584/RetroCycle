@@ -18,6 +18,8 @@
         body {
             font-family: 'Roboto', sans-serif;
             margin:0;
+            width:100%;
+            overflow-x:hidden;
         }
         .navbar {
             width:100%;
@@ -45,7 +47,7 @@
             text-decoration:none;
             color:white;
         }
-        .introC {
+        .bodyC {
             margin:0;
             background-color:#ffffcc;
             display:grid;
@@ -53,13 +55,22 @@
             width:100%;
             align-content:center;
             justify-content:center;
-            padding:12vh 0px;
+            padding:40px 0px;
         }
-        .introGrid {
+        .introBodyC {
+            padding:100px 0px;
+        }
+        .bodyGrid {
             display:grid;
             grid-template-columns:55% 45%;
         }
-        .introBodyC h1{
+        .reversed {
+            grid-template-columns:55% 45%;
+        }
+        .centered {
+            grid-template-columns:100%;
+        }
+        .bodyBodyC h1{
             font-size:50px;
             margin:0px;
         }
@@ -71,7 +82,7 @@
             font-family: 'Kalam', cursive;
             font-weight:bold;
         }
-        .introBodyC p{
+        .bodyBodyC p{
             font-size:20px;
             margin:10px 0px 0px;
         }
@@ -81,6 +92,50 @@
             transform:rotate(5deg);
             margin-right:auto;
             margin-left:auto;
+        }
+        .shopDemo {
+            display:grid;
+            grid-template-columns:25% 25% 25% 25%;
+            width:100%;
+            margin:0;
+        }
+        .shopDemoI {
+            text-align:center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center;
+            padding:200px 0px;
+        }
+        .shopDemoI:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor:pointer;
+        }
+        #demo1 {
+            background-image:url("Assets/bracelet.jpg");   
+        }
+        #demo2 {
+            background-image:url("Assets/earring.jpg");   
+        }
+        #demo3 {
+            background-image:url("Assets/handbag.jpg");   
+        }
+        #demo4 {
+            background-image:url("Assets/wallet.jpg");   
+        }
+        .shopDemoI h2 {
+            font-size:38px;
+        }
+        .shopDemoBtn {
+            background-color:#595959;
+            color:white;
+            font-size:18px;
+            padding:14px;
+            border:none;
+            transition:background-color 0.5s;
+        }
+        .shopDemoBtn:hover {
+            background-color:#404040;
+            cursor:pointer;
         }
     </style>
 </head>
@@ -93,20 +148,58 @@
             <li><a href="howToHelp.html" class="navLink">How You Can Help</a></li>
         </ul>
     </div>
-    <div class="introC">
-        <div class="introGrid">
-            <div class="introBodyC">
+    <div class="bodyC introBodyC">
+        <div class="bodyGrid">
+            <div class="bodyBodyC">
                 <h1>Saving the <span class="futureTxt">future</span> by bringing back the <span class="pastTxt">past</span></h1>
                 <p>Transforming wasted treasures into modern pleasures.</p>
             </div>
-            <div class="introImgC"><img src="Assets/vhs3.png" class="introImg" alt="Intro image"></div>
+            <div class="bodyImgC"><img src="Assets/vhs3.png" class="introImg" alt="Intro image"></div>
         </div>
     </div>
-    <div class="">
+    <div class="bodyC" style="background-image:linear-gradient(to bottom, #ffffcc, #9fff80);">
+        <div class="bodyGrid">
+            <div class="bodyBodyC">
+                <h1>Our Mission</h1>
+                <p>To upcycle vintage technology into fashionable items with a touch of modern technology.</p>
+            </div>
+            <div class="bodyImgC"></div>
+        </div>
+    </div>
+    <div class="bodyC" style="background-image:linear-gradient(to bottom, #9fff80, #2db300);">
+        <div class="bodyGrid centered">
+            <div class="bodyImgC"></div>
+            <div class="bodyBodyC">
+                <h1 style="text-align:center;color:black;">Our Products</h1>
+            </div>
+        </div>
+    </div>
+    <hr style="height:3px;background-color:#4d4d4d;margin:0;width:100%;border:none;">
+    <div class="shopDemo">
+        <div class="shopDemoI" id="demo1">
+            <h2>Bracelets</h2>
+            <button class="shopDemoBtn"><a href="store.html" class="navLink">Shop Bracelets</a></button>
+        </div>
+        <div class="shopDemoI" id="demo2">
+            <h2>Earrings</h2>
+            <button class="shopDemoBtn"><a href="store.html" class="navLink">Shop Earrings</a></button>
+        </div>
+        <div class="shopDemoI" id="demo3">
+            <h2>Handbags</h2>
+            <button class="shopDemoBtn"><a href="store.html" class="navLink">Shop Handbags</a></button>
+        </div>
+        <div class="shopDemoI" id="demo4">
+            <h2>Wallets</h2>
+            <button class="shopDemoBtn"><a href="store.html" class="navLink">Shop Wallets</a></button>
+        </div>
+    </div>
 </body>
 <script>
     var navbarLI = document.querySelector(".navbarList li");
     $(".navbar").css("height", navbarLI.offsetHeight+1);
+    $(".shopDemoI").on("click", function() {
+        window.location.href="store.html";
+    });
 </script>
 
 </html>
