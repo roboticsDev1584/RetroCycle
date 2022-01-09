@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="Assets/favicon.png" />
+    <title>RetroCycle</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        /*
+            Dark Green: #2db300
+            Green: #39e600
+        */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin:0;
+        }
+        .navbar {
+            width:100%;
+            height:40px;
+            background-image:linear-gradient(to right, #2db300, #39e600);
+        }
+        .navbarList {
+            list-style-type:none;
+            margin:0;
+            width:100%;
+        }
+        .navbarList li {
+            float:left;
+            margin:0;
+            padding:14px;
+            color:white;
+            font-size:18px;
+            background-color:rgba(0,0,0,0);
+            transition:background-color 0.5s;
+        }
+        .navbarList li:hover {
+            background-color:#39e600;
+        }
+        .navLink {
+            text-decoration:none;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="navbarList">
+            <li><a href="/" class="navLink"><img src="" class="navLogo" alt="RC Logo"></a></li>
+            <li><a href="/" class="navLink">Home</a></li>
+            <li><a href="store.html" class="navLink">Store</a></li>
+            <li><a href="howToHelp.html" class="navLink">How You Can Help</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    var navbarLI = document.querySelector(".navbarList li");
+    $(".navbar").css("height", navbarLI.offsetHeight);
+</script>
+
+</html>
