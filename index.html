@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Kalam:wght@400;700&family=Lobster+Two:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
         /*
             Dark Green: #2db300
@@ -20,6 +20,10 @@
             margin:0;
             width:100%;
             overflow-x:hidden;
+            background-image:url("Assets/retroBcg.png");
+            background-repeat:no-repeat;
+            background-position:center;
+            background-size:cover;
         }
         .navbar {
             width:100%;
@@ -30,15 +34,19 @@
             list-style-type:none;
             margin:0;
             width:100%;
+            font-family: 'Lobster Two', cursive;
         }
         .navbarList li {
             float:left;
             margin:0;
             padding:20px;
             color:white;
-            font-size:18px;
+            font-size:24px;
             background-color:rgba(0,0,0,0);
             transition:background-color 0.5s;
+        }
+        .navbarList li:first-child {
+            padding:10px 20px 4px 20px;
         }
         .navbarList li:hover {
             background-color:#39e600;
@@ -47,9 +55,16 @@
             text-decoration:none;
             color:white;
         }
+        .navLink div:last-child {
+            display:block;
+            float:left;
+        }
+        .navLogo {
+            width:50px;
+            border-radius:50%;
+        }
         .bodyC {
             margin:0;
-            background-color:#ffffcc;
             display:grid;
             grid-template-columns:66%;
             width:100%;
@@ -58,7 +73,7 @@
             padding:40px 0px;
         }
         .introBodyC {
-            padding:100px 0px;
+            padding:110px 0px;
         }
         .bodyGrid {
             display:grid;
@@ -70,28 +85,26 @@
         .centered {
             grid-template-columns:100%;
         }
+        .bodyBodyC {
+            color:white;
+            font-family: 'Lobster Two', cursive;
+            font-style:italic;
+        }
         .bodyBodyC h1{
-            font-size:50px;
+            font-size:80px;
             margin:0px;
         }
-        .futureTxt {
-            font-family: 'Exo 2', sans-serif;
-            font-weight:bold;
-        }
-        .pastTxt {
-            font-family: 'Kalam', cursive;
-            font-weight:bold;
-        }
         .bodyBodyC p{
-            font-size:20px;
+            font-size:36px;
             margin:10px 0px 0px;
+            font-weight:bold;
         }
         .introImg {
-            width:76%;
+            width:40%;
             display:block;
-            transform:rotate(5deg);
             margin-right:auto;
             margin-left:auto;
+            border-radius:50%;
         }
         .shopDemo {
             display:grid;
@@ -142,7 +155,8 @@
 <body>
     <div class="navbar">
         <ul class="navbarList">
-            <li><a href="index.html" class="navLink"><img src="" class="navLogo" alt="RC&nbsp;">RetroCycle</a></li>
+            <li><a href="index.html" class="navLink"><img src="Assets/logo2.png" class="navLogo" alt="RC&nbsp;"></a></li>
+            <li><a href="index.html" class="navLink">RetroCycle</a></li>
             <li><a href="index.html" class="navLink">Home</a></li>
             <li><a href="store.html" class="navLink">Store</a></li>
             <li><a href="howToHelp.html" class="navLink">How You Can Help</a></li>
@@ -151,13 +165,13 @@
     <div class="bodyC introBodyC">
         <div class="bodyGrid">
             <div class="bodyBodyC">
-                <h1>Saving the <span class="futureTxt">future</span> by bringing back the <span class="pastTxt">past</span></h1>
-                <p>Transforming wasted treasures into modern pleasures.</p>
+                <h1>Retro-Cycle</h1>
+                <p>Saving the Future by Bringing Back the Past</p>
             </div>
-            <div class="bodyImgC"><img src="Assets/vhs3.png" class="introImg" alt="Intro image"></div>
+            <div class="bodyImgC"><img src="Assets/logo2.png" class="introImg" alt="Intro image"></div>
         </div>
     </div>
-    <div class="bodyC" style="background-image:linear-gradient(to bottom, #ffffcc, #9fff80);">
+    <div class="bodyC">
         <div class="bodyGrid">
             <div class="bodyBodyC">
                 <h1>Our Mission</h1>
@@ -166,37 +180,10 @@
             <div class="bodyImgC"></div>
         </div>
     </div>
-    <div class="bodyC" style="background-image:linear-gradient(to bottom, #9fff80, #2db300);">
-        <div class="bodyGrid centered">
-            <div class="bodyImgC"></div>
-            <div class="bodyBodyC">
-                <h1 style="text-align:center;color:black;">Our Products</h1>
-            </div>
-        </div>
-    </div>
-    <hr style="height:3px;background-color:#4d4d4d;margin:0;width:100%;border:none;">
-    <div class="shopDemo">
-        <div class="shopDemoI" id="demo1">
-            <h2>Bracelets</h2>
-            <button class="shopDemoBtn"><a href="store.html" class="navLink">Shop Bracelets</a></button>
-        </div>
-        <div class="shopDemoI" id="demo2">
-            <h2>Earrings</h2>
-            <button class="shopDemoBtn"><a href="store.html" class="navLink">Shop Earrings</a></button>
-        </div>
-        <div class="shopDemoI" id="demo3">
-            <h2>Handbags</h2>
-            <button class="shopDemoBtn"><a href="store.html" class="navLink">Shop Handbags</a></button>
-        </div>
-        <div class="shopDemoI" id="demo4">
-            <h2>Wallets</h2>
-            <button class="shopDemoBtn"><a href="store.html" class="navLink">Shop Wallets</a></button>
-        </div>
-    </div>
 </body>
 <script>
     var navbarLI = document.querySelector(".navbarList li");
-    $(".navbar").css("height", navbarLI.offsetHeight+1);
+    $(".navbar").css("height", navbarLI.offsetHeight);
     $(".shopDemoI").on("click", function() {
         window.location.href="store.html";
     });
