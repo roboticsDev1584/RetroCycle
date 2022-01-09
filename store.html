@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="Assets/favicon.png" />
+    <title>RetroCycle</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /*
+            Dark Green: #2db300
+            Green: #39e600
+        */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin:0;
+            width:100%;
+            overflow-x:hidden;
+        }
+        .navbar {
+            width:100%;
+            height:40px;
+            background-image:linear-gradient(to right, #2db300, #33cc00, #2db300);
+        }
+        .navbarList {
+            list-style-type:none;
+            margin:0;
+            width:100%;
+        }
+        .navbarList li {
+            float:left;
+            margin:0;
+            padding:20px;
+            color:white;
+            font-size:18px;
+            background-color:rgba(0,0,0,0);
+            transition:background-color 0.5s;
+        }
+        .navbarList li:hover {
+            background-color:#39e600;
+        }
+        .navLink {
+            text-decoration:none;
+            color:white;
+        }
+        .bodyC {
+            margin:0;
+            background-color:#ffffcc;
+            display:grid;
+            grid-template-columns:66%;
+            width:100%;
+            align-content:center;
+            justify-content:center;
+            padding:40px 0px;
+        }
+        .introBodyC {
+            padding:100px 0px;
+        }
+        .bodyGrid {
+            display:grid;
+            grid-template-columns:55% 45%;
+        }
+        .reversed {
+            grid-template-columns:55% 45%;
+        }
+        .centered {
+            grid-template-columns:100%;
+        }
+        .bodyBodyC h1{
+            font-size:50px;
+            margin:0px;
+        }
+        .futureTxt {
+            font-family: 'Exo 2', sans-serif;
+            font-weight:bold;
+        }
+        .pastTxt {
+            font-family: 'Kalam', cursive;
+            font-weight:bold;
+        }
+        .bodyBodyC p{
+            font-size:20px;
+            margin:10px 0px 0px;
+        }
+        .introImg {
+            width:76%;
+            display:block;
+            transform:rotate(5deg);
+            margin-right:auto;
+            margin-left:auto;
+        }
+        .storeImg {
+            transform:rotateY(180deg);
+            width:50%;
+        }
+        .shopDemo {
+            display:grid;
+            grid-template-columns:25% 25% 25% 25%;
+            width:100%;
+            margin:0;
+        }
+        .shopDemoI {
+            text-align:center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center;
+            padding:200px 0px;
+        }
+        .shopDemoI:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor:pointer;
+        }
+        #demo1 {
+            background-image:url("Assets/bracelet.jpg");   
+        }
+        #demo2 {
+            background-image:url("Assets/earring.jpg");   
+        }
+        #demo3 {
+            background-image:url("Assets/handbag.jpg");   
+        }
+        #demo4 {
+            background-image:url("Assets/wallet.jpg");   
+        }
+        .shopDemoI h2 {
+            font-size:38px;
+        }
+        .shopDemoBtn {
+            background-color:#595959;
+            color:white;
+            font-size:18px;
+            padding:14px;
+            border:none;
+            transition:background-color 0.5s;
+        }
+        .shopDemoBtn:hover {
+            background-color:#404040;
+            cursor:pointer;
+        }
+        .storeListing {
+            background-color:#39e600;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+            width:100%;
+            justify-content:space-evenly;
+        }
+        .storeItem {
+            background-color:white;
+            width:340px;
+            padding:4px;
+        }
+        .storeBImg {
+            width:100%;
+        }
+        .bodySImgC {
+            margin-right:auto;
+            margin-left:auto;
+            width:100%;
+            height:300px;
+            overflow-y:hidden;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .bodyText h3 {
+            font-size:30px;
+            margin:0px;
+            padding:6px;
+        }
+        .bodyRow {
+            font-size:26px;
+            font-style:itaic;
+            margin:0px;
+            padding:6px;
+        }
+        .bodyRow {
+            display:grid;
+            grid-template-columns:auto auto;
+            justify-content:space-between;
+            align-content:center;
+            width:100%;
+        }
+        .storeBtn {
+            font-size:16px;
+            padding:10px;
+            box-sizing:border-box;
+            margin-right:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="navbarList">
+            <li><a href="index.html" class="navLink"><img src="" class="navLogo" alt="RC&nbsp;">RetroCycle</a></li>
+            <li><a href="index.html" class="navLink">Home</a></li>
+            <li><a href="store.html" class="navLink">Store</a></li>
+            <li><a href="howToHelp.html" class="navLink">How You Can Help</a></li>
+        </ul>
+    </div>
+    <div class="bodyC" style="background-image:linear-gradient(to bottom, #ffffcc, #9fff80);">
+        <div class="bodyGrid">
+            <div class="bodyBodyC">
+                <h1>Store</h1>
+                <p>Our upcycled products are reasonably priced to ensure that you can experience our environmentally-friendly solution without feeling a financial burden as a result.</p>
+            </div>
+            <div class="bodyImgC"><img src="Assets/cart.png" class="introImg storeImg" alt="Store image"></div>
+        </div>
+    </div>
+    <div class="storeListing">
+        <div class="storeItem">
+            <div class="bodySImgC"><img src="Assets/bracelet.jpg" class="storeBImg" loading="lazy" alt="Item image"></div>
+            <div class="bodyText">
+                <h3>Bracelet</h3>
+                <div class="bodyRow"><div>$19.99 </div><button class="shopDemoBtn storeBtn">Add To Cart</button></div>
+            </div>
+        </div>
+        <div class="storeItem">
+            <div class="bodySImgC"><img src="Assets/earring.jpg" class="storeBImg" loading="lazy" alt="Item image"></div>
+            <div class="bodyText">
+                <h3>Earrings</h3>
+                <div class="bodyRow"><div>$19.99 </div><button class="shopDemoBtn storeBtn">Add To Cart</button></div>
+            </div>
+        </div>
+        <div class="storeItem">
+            <div class="bodySImgC"><img src="Assets/handbag.jpg" class="storeBImg" loading="lazy" alt="Item image"></div>
+            <div class="bodyText">
+                <h3>Handbag</h3>
+                <div class="bodyRow"><div>$44.99 </div><button class="shopDemoBtn storeBtn">Add To Cart</button></div>
+            </div>
+        </div>
+        <div class="storeItem">
+            <div class="bodySImgC"><img src="Assets/wallet.jpg" class="storeBImg" loading="lazy" alt="Item image"></div>
+            <div class="bodyText">
+                <h3>Wallet</h3>
+                <div class="bodyRow"><div>$34.99 </div><button class="shopDemoBtn storeBtn">Add To Cart</button></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var navbarLI = document.querySelector(".navbarList li");
+    $(".navbar").css("height", navbarLI.offsetHeight+1);
+    $(".shopDemoI").on("click", function() {
+        window.location.href="store.html";
+    });
+</script>
+
+</html>
