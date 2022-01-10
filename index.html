@@ -10,11 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Kalam:wght@400;700&family=Lobster+Two:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="Assets/delivery.css" rel="stylesheet" type="text/css">
     <style>
-        /*
-            Dark Green: #2db300
-            Green: #39e600
-        */
         body {
             font-family: 'Roboto', sans-serif;
             margin:0;
@@ -24,11 +21,14 @@
             background-repeat:no-repeat;
             background-position:center;
             background-size:cover;
+            background-attachment:fixed;
         }
         .navbar {
             width:100%;
             height:40px;
-            background-image:linear-gradient(to right, #2db300, #33cc00, #2db300);
+            /*background-image:linear-gradient(to right, #2db300, #33cc00, #2db300);*/
+            background-color:white;
+            position:sticky;
         }
         .navbarList {
             list-style-type:none;
@@ -40,7 +40,7 @@
             float:left;
             margin:0;
             padding:20px;
-            color:white;
+            color:black;
             font-size:24px;
             background-color:rgba(0,0,0,0);
             transition:background-color 0.5s;
@@ -49,11 +49,12 @@
             padding:10px 20px 4px 20px;
         }
         .navbarList li:hover {
-            background-color:#39e600;
+            /*background-color:#39e600;*/
+            background-color:#ff9933;
         }
         .navLink {
             text-decoration:none;
-            color:white;
+            color:black;
         }
         .navLink div:last-child {
             display:block;
@@ -95,9 +96,10 @@
             margin:0px;
         }
         .bodyBodyC p{
-            font-size:36px;
+            font-size:26px;
             margin:10px 0px 0px;
             font-weight:bold;
+            text-align:justify;
         }
         .introImg {
             width:40%;
@@ -150,6 +152,16 @@
             background-color:#404040;
             cursor:pointer;
         }
+        .animationGrid {
+            display:grid;
+            grid-template-columns:30% auto 30%;
+            width:100%;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }       
     </style>
 </head>
 <body>
@@ -157,7 +169,6 @@
         <ul class="navbarList">
             <li><a href="index.html" class="navLink"><img src="Assets/logo2.png" class="navLogo" alt="RC&nbsp;"></a></li>
             <li><a href="index.html" class="navLink">RetroCycle</a></li>
-            <li><a href="index.html" class="navLink">Home</a></li>
             <li><a href="store.html" class="navLink">Store</a></li>
             <li><a href="howToHelp.html" class="navLink">How You Can Help</a></li>
         </ul>
@@ -166,20 +177,97 @@
         <div class="bodyGrid">
             <div class="bodyBodyC">
                 <h1>Retro-Cycle</h1>
-                <p>Saving the Future by Bringing Back the Past</p>
+                <p style="font-size:36px;">Saving the Future by Bringing Back the Past</p>
             </div>
             <div class="bodyImgC"><img src="Assets/logo2.png" class="introImg" alt="Intro image"></div>
         </div>
     </div>
-    <div class="bodyC">
+    <div class="bodyC" style="background-color:rgba(0,0,0,0.37);">
+            <div class="bodyBodyC">
+                <p style="font-size:26px;width:90%;text-align:justify;">
+                    Pollution is a problem that plagues planet earth.  As the human population grows, it produces more and more trash, which infests our planet’s oceans and destroys the earth.  Although efforts to recycle trash have been made, they cannot keep up with the constant influx of trash. 
+                    <br><br>Thats where we come in!
+                    <br><br>Retro-Cycle is a company that works to upcycle trash into new products that people can reuse.  We take materials such as old cans and plastic bags to create trendy, retro fashion!
+                </p>
+            </div>
+    </div>
+    <div class="bodyC introBodyC">
         <div class="bodyGrid">
             <div class="bodyBodyC">
-                <h1>Our Mission</h1>
-                <p>To upcycle vintage technology into fashionable items with a touch of modern technology.</p>
+                <h1>Our Process</h1>
             </div>
-            <div class="bodyImgC"></div>
+            <div class="bodyImgC"><img src="Assets/recycle.png" class="introImg" style="width:50%;border-radius:0px;" alt="Intro image"></div>
         </div>
     </div>
+    <div class="bodyC">
+            <div class="bodyBodyC">
+                <h1>Step 1 - Processing</h1>
+                <p>The journey from waste to fashion begins with our waste-processing center. This is the 
+                    place where the waste that is donated to us is separated into what can be upcycled, and 
+                    what cannot be upcycled. Once the sorting process is complete, each item is carefully 
+                    immersed into a disenfecting bath to remove any residue, dried, and cured with ultraviolet
+                    (UV) light to eliminate unwanted germs.
+                </p>
+            </div>
+        <div class="animationGrid">
+        <div class="container">
+            <div class="car-wrapper">
+              <div class="car-wrapper_inner">
+                <div class="car_outter">  
+                  <div class="car">
+                    <div class="body">
+                      <div></div>
+                    </div>
+                    <div class="decos">
+                      <div class="line-bot"></div>
+                      <div class="door">
+                        <div class="handle"></div>
+                        <div class="bottom"></div>
+                      </div>
+                      <div class="window"></div> 
+                      <div class="light"></div>
+                      <div class="light-front"></div>
+                    </div>
+                    <div>
+                      <div class="wheel"></div>
+                      <div class="wheel"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div><img src="Assets/arrow.png" class="introImg" style="width:26%;border-radius:0px;padding:25px;" alt="Arrow"></div>
+          </div>         
+    </div>
+    <div class="bodyC">
+            <div class="bodyBodyC">
+                <h1>Step 2 - Disassembly</h1>
+                <p>In this step of the process, each piece of cleaned trash is further disassembled into parts
+                    that will be used for each of the fashion items. For most items, this means cleaning out 
+                    the inside so that the shell of the part can be directly repurposed for a new fashion 
+                    product, but for others, this involves cutting the item into pieces which will then be 
+                    reformed into the desired product.
+                </p>
+            </div>
+    </div>
+    <div class="bodyC">
+            <div class="bodyBodyC">
+                <h1>Step 3 - Reassembly</h1>
+                <p>In this step of the process, each disassembled part is reassembled into the fashion item 
+                    it is destined to become by the help of our skilled craft team.
+                </p>
+            </div>
+    </div>
+    <div class="bodyC">
+            <div class="bodyBodyC">
+                <h1>Step 4 - Final Touches</h1>
+                <p>Before the fashion product is sold on the market, we apply a coat of paint, polish, and 
+                    protective coating to ensure that what we sell lives out its purpose.
+                </p>
+            </div>
+    </div>
+    
 </body>
 <script>
     var navbarLI = document.querySelector(".navbarList li");
@@ -187,6 +275,22 @@
     $(".shopDemoI").on("click", function() {
         window.location.href="store.html";
     });
+    window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.querySelector(".navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 </script>
 
 </html>
