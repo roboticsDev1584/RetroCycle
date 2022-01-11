@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="Assets/favicon.png" />
+    <title>How To Help</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Kalam:wght@400;700&family=Lobster+Two:ital,wght@0,700;1,400;1,700&family=Patua+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin:0;
+            width:100%;
+            overflow-x:hidden;
+            background-image:url("Assets/retroBcg2.png");
+            background-repeat:no-repeat;
+            background-position:center;
+            background-size:cover;
+            background-attachment:fixed;
+        }
+        .navbar {
+            width:100%;
+            height:40px;
+            /*background-image:linear-gradient(to right, #2db300, #33cc00, #2db300);*/
+            background-color:white;
+            position:sticky;
+        }
+        .navbarList {
+            list-style-type:none;
+            margin:0;
+            width:100%;
+            font-family: 'Lobster Two', cursive;
+        }
+        .navbarList li {
+            float:left;
+            margin:0;
+            padding:20px;
+            color:black;
+            font-size:24px;
+            background-color:rgba(0,0,0,0);
+            transition:background-color 0.5s;
+        }
+        .navbarList li:first-child {
+            padding:10px 20px 4px 20px;
+        }
+        .navbarList li:hover {
+            background-color:#ebfb62;
+        }
+        .navLink {
+            text-decoration:none;
+            color:black;
+        }
+        .navLink div:last-child {
+            display:block;
+            float:left;
+        }
+        .navLogo {
+            width:50px;
+            border-radius:50%;
+        }
+        .bodyC {
+            margin:0;
+            display:grid;
+            grid-template-columns:66%;
+            width:100%;
+            align-content:center;
+            justify-content:center;
+            padding:40px 0px;
+        }
+        .introBodyC {
+            padding:110px 0px;
+        }
+        .bodyGrid {
+            display:grid;
+            grid-template-columns:55% 45%;
+        }
+        .bodyImgGrid {
+            display:flex;
+            align-items:center;
+        }
+        .reversed {
+            grid-template-columns:45% 55%;
+        }
+        .centered {
+            grid-template-columns:100%;
+        }
+        .bodyBodyC {/*dark grey: #262626 very light grey: */
+            color:white;
+            font-family: 'Lobster Two', cursive;
+            font-style:italic;
+        }
+        .bodyBodyC h1{
+            font-size:80px;
+            margin:0px;
+        }
+        .bodyBodyC p{
+            font-size:26px;
+            margin:10px 0px 0px;
+            font-weight:bold;
+            text-align:justify;
+        }
+        .introImg {
+            width:40%;
+            display:block;
+            margin-right:auto;
+            margin-left:auto;
+        }
+        .popImg {
+            width:200px;
+            display:block;
+        }
+        .popImgLeft {
+            width:40%;
+            display:block;
+        }
+        .shopDemo {
+            display:grid;
+            grid-template-columns:25% 25% 25% 25%;
+            width:100%;
+            margin:0;
+        }
+        .shopDemoBtn {
+            background-color:#595959;
+            color:white;
+            font-size:18px;
+            padding:14px;
+            border:none;
+            transition:background-color 0.5s;
+        }
+        .shopDemoBtn:hover {
+            background-color:#404040;
+            cursor:pointer;
+        }
+        .animationGrid {
+            display:grid;
+            grid-template-columns:30% auto 30%;
+            width:100%;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index:99;
+        }
+        .footer {
+            background-color:#ebfb62;
+            color:black;
+            font-weight:bold;
+            font-size:20px;
+            text-align:center;
+            padding:12px;
+        }
+        /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ebfb62; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b4c804; 
+}     
+    .bodyContent {
+        width:80%;
+        margin-right:auto;
+        margin-left:auto;
+    }  
+    /*
+        Light blue: #9faeec
+        Yellow: #d8a013
+        Pink: #fea9e3
+        Manilla: #f3ecda
+        Neon yellow: #ebfb62
+        Neon pink: #fa6de5
+    */
+    .backFade {
+        background-color:rgba(159, 174, 236,0.4);
+        border-radius:22px;
+    }
+    .backFade2 {
+        background-color:rgba(216, 160, 19,0.4);
+        border-radius:22px;
+    }
+    .backFade3 {
+        background-color:rgba(254, 169, 227,0.4);
+        border-radius:22px;
+    }
+    .backFade4 {
+        background-color:rgba(243, 236, 218,0.4);
+        border-radius:22px;
+    }
+        .storeImg {
+            transform:rotateY(180deg);
+            width:50%;
+        }
+        .shopDemo {
+            display:grid;
+            grid-template-columns:25% 25% 25% 25%;
+            width:100%;
+            margin:0;
+        }
+        .shopDemoI {
+            text-align:center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center;
+            padding:200px 0px;
+            cursor:pointer;
+        }
+        .shopDemoI:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor:pointer;
+        }
+        #demo1 {
+            background-image:url("Assets/bracelet.jpg");   
+        }
+        #demo2 {
+            background-image:url("Assets/earring.jpg");   
+        }
+        #demo3 {
+            background-image:url("Assets/handbag.jpg");   
+        }
+        #demo4 {
+            background-image:url("Assets/wallet.jpg");   
+        }
+        .shopDemoI h2 {
+            font-size:38px;
+        }
+        .shopDemoBtn {
+            background-color:#595959;
+            color:white;
+            font-size:18px;
+            padding:14px;
+            border:none;
+            transition:background-color 0.5s;
+        }
+        .shopDemoBtn:hover {
+            background-color:#404040;
+            cursor:pointer;
+        }
+        .storeListing {
+            position:relative;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+            width:100%;
+            justify-content:space-evenly;
+        }
+        .storeItem {
+            width:340px;
+            background-color:white;
+            border-radius:20px;
+            cursor:pointer;
+        }
+        .storeBImg {
+            width:120%;
+            display:block;
+            margin-left:-10%;
+        }
+        .bodySImgC {
+            margin-right:auto;
+            margin-left:auto;
+            width:100%;
+            height:300px;
+            overflow-x:hidden;
+            overflow-y:hidden;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .bodyText {
+            font-family: 'Lobster Two', cursive;
+            padding:6px;
+        }
+        .bodyText h3 {
+            font-size:30px;
+            margin:0px;
+            padding:6px;
+            font-style:italic;
+        }
+        .bodyRow {
+            display:grid;
+            grid-template-columns:auto auto;
+            justify-content:space-between;
+            align-content:center;
+            width:100%;
+            font-size:26px;
+            margin:0px;
+            padding:6px;
+        }
+        .storeBtn {
+            font-size:16px;
+            padding:10px;
+            box-sizing:border-box;
+            margin-right:10px;
+        }
+        .popUp {
+            position:relative;
+            width:100%;
+            padding:10px;
+            border-radius:20px;
+            background-color:white;
+            display:none;
+        }
+        .detailsBody {
+            font-family: 'Lobster Two', cursive;
+            padding:10px;
+            font-size:26px;
+        }
+        .detailsBody h3, .detailsBody h4 {
+            margin:4px;
+        }
+        .detailsBody h3 {
+            margin-bottom:10px;
+        }
+        .rightArrow {
+            font-size:100px;
+            font-weight:bold;
+            color:#fa6de5;
+            font-family: 'Patua One', cursive;
+        }
+        .close {
+            position:absolute;
+            font-family: 'Patua One', cursive;
+            top:10px;
+            left:30px;
+            font-size:30px;
+            font-weight:bold;
+            color:#fa6de5;
+            user-select:none;
+        }
+        .close:hover {
+            cursor:pointer;
+        }
+        .formIframe {
+            width:100%;
+            height:80vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="navbarList">
+            <li><a href="index.html" class="navLink"><img src="Assets/logo2.png" class="navLogo" alt="RC&nbsp;"></a></li>
+            <li><a href="index.html" class="navLink">RetroCycle</a></li>
+            <li><a href="store.html" class="navLink">Store</a></li>
+            <li><a href="howToHelp.html" class="navLink">How You Can Help</a></li>
+        </ul>
+    </div>
+    <div class="bodyContent">    
+    <div class="bodyC introBodyC">
+        <div class="bodyGrid">
+            <div class="bodyBodyC">
+                <h1>How You Can Help</h1>
+                <p>Want to help donate items for us to upcycle? Please provide us with your contact information
+                    in the form below. 
+                </p>
+            </div>
+            <div class="bodyImgC"><img src="Assets/plus.png" loading="lazy" class="introImg" alt="Intro image"></div>
+        </div>
+    </div> 
+    <div class="bodyC backFade2" style="margin-bottom:100px;">
+        <div class="bodyBodyC" style="padding-bottom:12px;">
+            <h1>Contact Form</h1>
+        </div>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScVag86dgbPdwQnN6I-9MgHfIUGFgrLcX5B2UBlQRvxjpNA3w/viewform?embedded=true"
+            class="formIframe" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div> 
+    <div class="bodyC backFade" style="margin-bottom:70px;">
+            <div class="bodyBodyC">
+                <h1>Our Warehouse</h1>
+                <p style="margin-bottom:10px;">Please go to the following destination so that we can receive your items to be upcycled.
+                     Thank you for your support!
+                </p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.0134082286813!2d-74.42665278433955!3d40.93737333173345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c305ec75a449e7%3A0x5fd72ebe8ac8ea3f!2sRetrocycle!5e0!3m2!1sen!2sus!4v1641875615717!5m2!1sen!2sus"
+        class="formIframe" frameborder="0" marginheight="0" marginwidth="0" loading="lazy"></iframe>
+    </div>
+    
+<div class="footer">
+    Copyright © 2022 RetroCycle
+</div>
+</body>
+<script>
+var navbarLI = document.querySelector(".navbarList li");
+var navbar = document.querySelector(".navbar");
+var storeImages = document.getElementsByClassName("storeBImg");
+var sticky = navbar.offsetTop;
+
+/*function recenterImages() {
+    for (var index=0; index<storeImages.length; index++) {
+        if (storeImages[index].offsetHeight > 300) {
+            storeImages[index].style.marginTop = `${(storeImages[index].offsetHeight-300)/16}px`;
+        }
+        else {
+            storeImages[index].style.marginTop = `${(300-storeImages[index].offsetHeight)/16}px`;
+        }
+    }
+}*/
+function stickyNav() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+//recenterImages();
+$(".navbar").css("height", navbarLI.offsetHeight);
+window.onscroll = function() {stickyNav()};
+
+$(".close").on("click", function() {
+    $(".popUp").css("display","none");
+    $(".storeItem").css("display","block");
+    $(".navbar").css("display","block");
+    //recenterImages();
+});
+$(".storeItem").on("click", function() {
+    $(".storeItem").css("display","none");
+    switch($(this).attr("id")) {
+        case "item1":
+        $("#popUp").css("display","block");
+        break;
+        case "item2":
+        $("#popUp2").css("display","block");
+        break;
+        case "item3":
+        $("#popUp3").css("display","block");
+        break;
+        case "item4":
+        $("#popUp4").css("display","block");
+        break;
+    }
+});
+</script>
+
+</html>
