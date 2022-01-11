@@ -145,6 +145,7 @@
             position: fixed;
             top: 0;
             width: 100%;
+            z-index:99;
         }
         .footer {
             background-color:#ebfb62;
@@ -266,13 +267,16 @@
             cursor:pointer;
         }
         .storeBImg {
-            width:100%;
+            width:120%;
+            display:block;
+            margin-left:-10%;
         }
         .bodySImgC {
             margin-right:auto;
             margin-left:auto;
             width:100%;
             height:300px;
+            overflow-x:hidden;
             overflow-y:hidden;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
@@ -373,7 +377,7 @@
                         </p>
                     </div>
                     <div class="detailsBody" style="color:black;">
-                        <img src="Assets/logo.png" class="introImg" loading="lazy" alt="Intro image">
+                        <img src="Assets/bracelet.jpg" class="introImg" loading="lazy" style="width:80%;" alt="Intro image">
                         <h4>Rating: <span style="font-weight:bold;font-family:none;color:#ffcc00;">
                             <i class="fa fa-solid fa-star"></i>
                             <i class="fa fa-solid fa-star"></i>
@@ -401,7 +405,7 @@
                     <div class="rightArrow">&nbsp;</div>
                     <div class="rightArrow">&#62;</div>
                     <div class="rightArrow">&nbsp;</div>
-                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                    <img src="Assets/bracelet.jpg" class="popImg" loading="lazy" alt="Item image">
                 </div>
             </div>
             <div class="bodyC">
@@ -427,7 +431,7 @@
                         </p>
                     </div>
                     <div class="detailsBody" style="color:black;">
-                        <img src="Assets/logo.png" class="introImg" loading="lazy" alt="Intro image">
+                        <img src="Assets/earring.jpg" class="introImg" style="width:80%;" loading="lazy" alt="Intro image">
                         <h4>Rating: <span style="font-weight:bold;font-family:none;color:#ffcc00;">
                             <i class="fa fa-solid fa-star"></i>
                             <i class="fa fa-solid fa-star"></i>
@@ -455,7 +459,7 @@
                     <div class="rightArrow">&nbsp;</div>
                     <div class="rightArrow">&#62;</div>
                     <div class="rightArrow">&nbsp;</div>
-                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                    <img src="Assets/earring.jpg" class="popImg" loading="lazy" alt="Item image">
                 </div>
             </div>
             <div class="bodyC">
@@ -481,7 +485,7 @@
                         </p>
                     </div>
                     <div class="detailsBody" style="color:black;">
-                        <img src="Assets/logo.png" class="introImg" loading="lazy" alt="Intro image">
+                        <img src="Assets/handbag.jpg" class="introImg" style="width:80%;" loading="lazy" alt="Intro image">
                         <h4>Rating: <span style="font-weight:bold;font-family:none;color:#ffcc00;">
                             <i class="fa fa-solid fa-star"></i>
                             <i class="fa fa-solid fa-star"></i>
@@ -509,7 +513,7 @@
                     <div class="rightArrow">&nbsp;</div>
                     <div class="rightArrow">&#62;</div>
                     <div class="rightArrow">&nbsp;</div>
-                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                    <img src="Assets/handbag.jpg" class="popImg" loading="lazy" alt="Item image">
                 </div>
             </div>
             <div class="bodyC">
@@ -535,7 +539,7 @@
                         </p>
                     </div>
                     <div class="detailsBody" style="color:black;">
-                        <img src="Assets/logo.png" class="introImg" loading="lazy" alt="Intro image">
+                        <img src="Assets/wallet.jpg" class="introImg" style="width:80%;" loading="lazy" alt="Intro image">
                         <h4>Rating: <span style="font-weight:bold;font-family:none;color:#ffcc00;">
                             <i class="fa fa-solid fa-star"></i>
                             <i class="fa fa-solid fa-star"></i>
@@ -563,7 +567,7 @@
                     <div class="rightArrow">&nbsp;</div>
                     <div class="rightArrow">&#62;</div>
                     <div class="rightArrow">&nbsp;</div>
-                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                    <img src="Assets/wallet.jpg" class="popImg" loading="lazy" alt="Item image">
                 </div>
             </div>
             <div class="bodyC">
@@ -614,27 +618,37 @@
 </div>
 </body>
 <script>
-        var navbarLI = document.querySelector(".navbarList li");
-    $(".navbar").css("height", navbarLI.offsetHeight);
-    window.onscroll = function() {myFunction()};
-
-// Get the navbar
+var navbarLI = document.querySelector(".navbarList li");
 var navbar = document.querySelector(".navbar");
-
-// Get the offset position of the navbar
+var storeImages = document.getElementsByClassName("storeBImg");
 var sticky = navbar.offsetTop;
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+/*function recenterImages() {
+    for (var index=0; index<storeImages.length; index++) {
+        if (storeImages[index].offsetHeight > 300) {
+            storeImages[index].style.marginTop = `${(storeImages[index].offsetHeight-300)/16}px`;
+        }
+        else {
+            storeImages[index].style.marginTop = `${(300-storeImages[index].offsetHeight)/16}px`;
+        }
+    }
+}*/
+function stickyNav() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
   }
 }
+//recenterImages();
+$(".navbar").css("height", navbarLI.offsetHeight);
+window.onscroll = function() {stickyNav()};
+
 $(".close").on("click", function() {
     $(".popUp").css("display","none");
     $(".storeItem").css("display","block");
+    $(".navbar").css("display","block");
+    //recenterImages();
 });
 $(".storeItem").on("click", function() {
     $(".storeItem").css("display","none");
