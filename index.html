@@ -10,14 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Kalam:wght@400;700&family=Lobster+Two:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="Assets/delivery.css" rel="stylesheet" type="text/css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin:0;
             width:100%;
             overflow-x:hidden;
-            background-image:url("Assets/retroBcg.png");
+            background-image:url("Assets/retroBcg2.png");
             background-repeat:no-repeat;
             background-position:center;
             background-size:cover;
@@ -49,8 +48,7 @@
             padding:10px 20px 4px 20px;
         }
         .navbarList li:hover {
-            /*background-color:#39e600;*/
-            background-color:#ff9933;
+            background-color:#ebfb62;
         }
         .navLink {
             text-decoration:none;
@@ -81,12 +79,12 @@
             grid-template-columns:55% 45%;
         }
         .reversed {
-            grid-template-columns:55% 45%;
+            grid-template-columns:45% 55%;
         }
         .centered {
             grid-template-columns:100%;
         }
-        .bodyBodyC {
+        .bodyBodyC {/*dark grey: #262626 very light grey: */
             color:white;
             font-family: 'Lobster Two', cursive;
             font-style:italic;
@@ -161,7 +159,63 @@
             position: fixed;
             top: 0;
             width: 100%;
-        }       
+        }
+        .footer {
+            background-color:#ebfb62;
+            color:black;
+            font-weight:bold;
+            font-size:20px;
+            text-align:center;
+            padding:12px;
+        }
+        /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ebfb62; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b4c804; 
+}     
+    .bodyContent {
+        width:80%;
+        margin-right:auto;
+        margin-left:auto;
+    }  
+    /*
+        Light blue: #9faeec
+        Yellow: #d8a013
+        Pink: #fea9e3
+        Manilla: #f3ecda
+        Neon yellow: #ebfb62
+        Neon pink: #fa6de5
+    */
+    .backFade {
+        background-color:rgba(159, 174, 236,0.4);
+        border-radius:22px;
+    }
+    .backFade2 {
+        background-color:rgba(216, 160, 19,0.4);
+        border-radius:22px;
+    }
+    .backFade3 {
+        background-color:rgba(254, 169, 227,0.4);
+        border-radius:22px;
+    }
+    .backFade4 {
+        background-color:rgba(243, 236, 218,0.4);
+        border-radius:22px;
+    }
     </style>
 </head>
 <body>
@@ -173,16 +227,17 @@
             <li><a href="howToHelp.html" class="navLink">How You Can Help</a></li>
         </ul>
     </div>
+    <div class="bodyContent">    
     <div class="bodyC introBodyC">
         <div class="bodyGrid">
             <div class="bodyBodyC">
-                <h1>Retro-Cycle</h1>
+                <h1>RetroCycle</h1>
                 <p style="font-size:36px;">Saving the Future by Bringing Back the Past</p>
             </div>
             <div class="bodyImgC"><img src="Assets/logo2.png" class="introImg" alt="Intro image"></div>
         </div>
     </div>
-    <div class="bodyC" style="background-color:rgba(0,0,0,0.37);">
+    <div class="bodyC backFade" style="width:66%;margin:0px auto 100px auto;">
             <div class="bodyBodyC">
                 <p style="font-size:26px;width:90%;text-align:justify;">
                     Pollution is a problem that plagues planet earth.  As the human population grows, it produces more and more trash, which infests our planet’s oceans and destroys the earth.  Although efforts to recycle trash have been made, they cannot keep up with the constant influx of trash. 
@@ -191,15 +246,14 @@
                 </p>
             </div>
     </div>
-    <div class="bodyC introBodyC">
+    <div class="bodyC introBodyC" style="margin-bottom:100px;">
         <div class="bodyGrid">
             <div class="bodyBodyC">
                 <h1>Our Process</h1>
             </div>
-            <div class="bodyImgC"><img src="Assets/recycle.png" class="introImg" style="width:50%;border-radius:0px;" alt="Intro image"></div>
         </div>
     </div>
-    <div class="bodyC introBodyC">
+    <div class="bodyC introBodyC backFade2" style="margin-bottom:100px;">
         <div class="bodyGrid">
             <div class="bodyBodyC">
                 <h1>Step 1 - Processing</h1>
@@ -213,48 +267,9 @@
             <div class="bodyImgC"><img src="Assets/recycle.png" class="introImg" style="width:50%;border-radius:0px;" alt="Intro image"></div>
         </div>
     </div>
-    <div class="bodyC">
-            <div class="bodyBodyC">
-                <h1>Step 1 - Processing</h1>
-                <p>The journey from waste to fashion begins with our waste-processing center. This is the 
-                    place where the waste that is donated to us is separated into what can be upcycled, and 
-                    what cannot be upcycled. Once the sorting process is complete, each item is carefully 
-                    immersed into a disenfecting bath to remove any residue, dried, and cured with ultraviolet
-                    (UV) light to eliminate unwanted germs.
-                </p>
-            </div>
-        <div class="animationGrid">
-        <div class="container">
-            <div class="car-wrapper">
-              <div class="car-wrapper_inner">
-                <div class="car_outter">  
-                  <div class="car">
-                    <div class="body">
-                      <div></div>
-                    </div>
-                    <div class="decos">
-                      <div class="line-bot"></div>
-                      <div class="door">
-                        <div class="handle"></div>
-                        <div class="bottom"></div>
-                      </div>
-                      <div class="window"></div> 
-                      <div class="light"></div>
-                      <div class="light-front"></div>
-                    </div>
-                    <div>
-                      <div class="wheel"></div>
-                      <div class="wheel"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-          <div><img src="Assets/arrow.png" class="introImg" style="width:26%;border-radius:0px;padding:25px;" alt="Arrow"></div>
-          </div>         
-    </div>
-    <div class="bodyC">
+    <div class="bodyC introBodyC backFade3" style="margin-bottom:100px;">
+        <div class="bodyGrid reversed">
+            <div class="bodyImgC"><img src="Assets/recycle.png" class="introImg" style="width:50%;border-radius:0px;" alt="Intro image"></div>
             <div class="bodyBodyC">
                 <h1>Step 2 - Disassembly</h1>
                 <p>In this step of the process, each piece of cleaned trash is further disassembled into parts
@@ -264,24 +279,71 @@
                     reformed into the desired product.
                 </p>
             </div>
+        </div>
     </div>
-    <div class="bodyC">
+    <div class="bodyC introBodyC backFade4" style="margin-bottom:100px;">
+        <div class="bodyGrid">
             <div class="bodyBodyC">
                 <h1>Step 3 - Reassembly</h1>
                 <p>In this step of the process, each disassembled part is reassembled into the fashion item 
                     it is destined to become by the help of our skilled craft team.
                 </p>
             </div>
+            <div class="bodyImgC"><img src="Assets/recycle.png" class="introImg" style="width:50%;border-radius:0px;" alt="Intro image"></div>
+        </div>
     </div>
-    <div class="bodyC">
+    <div class="bodyC introBodyC backFade" style="margin-bottom:100px;">
+        <div class="bodyGrid reversed">
+            <div class="bodyImgC"><img src="Assets/recycle.png" class="introImg" style="width:50%;border-radius:0px;" alt="Intro image"></div>
             <div class="bodyBodyC">
                 <h1>Step 4 - Final Touches</h1>
                 <p>Before the fashion product is sold on the market, we apply a coat of paint, polish, and 
                     protective coating to ensure that what we sell lives out its purpose.
                 </p>
             </div>
+        </div>
     </div>
-    
+    <div class="bodyC introBodyC">
+        <div class="bodyGrid">
+            <div class="bodyBodyC">
+                <h1>Our Environmental Impact</h1>
+            </div>
+        </div>
+    </div>
+    <div class="bodyC introBodyC backFade2" style="margin-bottom:100px;">
+        <div class="bodyGrid">
+            <div class="bodyBodyC">
+                <h1>Reducing</h1>
+                <p>We reduce... content and statistics here...
+                </p>
+            </div>
+            <div class="bodyImgC"><img src="Assets/recycle.png" class="introImg" style="width:50%;border-radius:0px;" alt="Intro image"></div>
+        </div>
+    </div>
+    <div class="bodyC introBodyC backFade3" style="margin-bottom:100px;">
+        <div class="bodyGrid reversed">
+            <div class="bodyImgC"><img src="Assets/recycle.png" class="introImg" style="width:50%;border-radius:0px;" alt="Intro image"></div>
+            <div class="bodyBodyC">
+                <h1>Reusing</h1>
+                <p>We reuse... content and statistics here...
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bodyC introBodyC backFade4" style="margin-bottom:100px;">
+        <div class="bodyGrid">
+            <div class="bodyBodyC">
+                <h1>Upcycling</h1>
+                <p>We upcycle... content and statistics here...
+                </p>
+            </div>
+            <div class="bodyImgC"><img src="Assets/recycle.png" class="introImg" style="width:50%;border-radius:0px;" alt="Intro image"></div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        Copyright © 2022 RetroCycle
+    </div>
 </body>
 <script>
     var navbarLI = document.querySelector(".navbarList li");
