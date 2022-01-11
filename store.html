@@ -4,52 +4,67 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="Assets/favicon.png" />
-    <title>RetroCycle</title>
+    <title>Store</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Kalam:wght@400;700&family=Lobster+Two:ital,wght@0,700;1,400;1,700&family=Patua+One&display=swap" rel="stylesheet">
     <style>
-        /*
-            Dark Green: #2db300
-            Green: #39e600
-        */
         body {
             font-family: 'Roboto', sans-serif;
             margin:0;
             width:100%;
             overflow-x:hidden;
+            background-image:url("Assets/retroBcg2.png");
+            background-repeat:no-repeat;
+            background-position:center;
+            background-size:cover;
+            background-attachment:fixed;
         }
         .navbar {
             width:100%;
             height:40px;
-            background-image:linear-gradient(to right, #2db300, #33cc00, #2db300);
+            /*background-image:linear-gradient(to right, #2db300, #33cc00, #2db300);*/
+            background-color:white;
+            position:sticky;
         }
         .navbarList {
             list-style-type:none;
             margin:0;
             width:100%;
+            font-family: 'Lobster Two', cursive;
         }
         .navbarList li {
             float:left;
             margin:0;
             padding:20px;
-            color:white;
-            font-size:18px;
+            color:black;
+            font-size:24px;
             background-color:rgba(0,0,0,0);
             transition:background-color 0.5s;
         }
+        .navbarList li:first-child {
+            padding:10px 20px 4px 20px;
+        }
         .navbarList li:hover {
-            background-color:#39e600;
+            background-color:#ebfb62;
         }
         .navLink {
             text-decoration:none;
-            color:white;
+            color:black;
+        }
+        .navLink div:last-child {
+            display:block;
+            float:left;
+        }
+        .navLogo {
+            width:50px;
+            border-radius:50%;
         }
         .bodyC {
             margin:0;
-            background-color:#ffffcc;
             display:grid;
             grid-template-columns:66%;
             width:100%;
@@ -58,41 +73,135 @@
             padding:40px 0px;
         }
         .introBodyC {
-            padding:100px 0px;
+            padding:110px 0px;
         }
         .bodyGrid {
             display:grid;
             grid-template-columns:55% 45%;
         }
+        .bodyImgGrid {
+            display:flex;
+            align-items:center;
+        }
         .reversed {
-            grid-template-columns:55% 45%;
+            grid-template-columns:45% 55%;
         }
         .centered {
             grid-template-columns:100%;
         }
+        .bodyBodyC {/*dark grey: #262626 very light grey: */
+            color:white;
+            font-family: 'Lobster Two', cursive;
+            font-style:italic;
+        }
         .bodyBodyC h1{
-            font-size:50px;
+            font-size:80px;
             margin:0px;
         }
-        .futureTxt {
-            font-family: 'Exo 2', sans-serif;
-            font-weight:bold;
-        }
-        .pastTxt {
-            font-family: 'Kalam', cursive;
-            font-weight:bold;
-        }
         .bodyBodyC p{
-            font-size:20px;
+            font-size:26px;
             margin:10px 0px 0px;
+            font-weight:bold;
+            text-align:justify;
         }
         .introImg {
-            width:76%;
+            width:40%;
             display:block;
-            transform:rotate(5deg);
             margin-right:auto;
             margin-left:auto;
         }
+        .popImg {
+            width:200px;
+            display:block;
+        }
+        .popImgLeft {
+            width:40%;
+            display:block;
+        }
+        .shopDemo {
+            display:grid;
+            grid-template-columns:25% 25% 25% 25%;
+            width:100%;
+            margin:0;
+        }
+        .shopDemoBtn {
+            background-color:#595959;
+            color:white;
+            font-size:18px;
+            padding:14px;
+            border:none;
+            transition:background-color 0.5s;
+        }
+        .shopDemoBtn:hover {
+            background-color:#404040;
+            cursor:pointer;
+        }
+        .animationGrid {
+            display:grid;
+            grid-template-columns:30% auto 30%;
+            width:100%;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        .footer {
+            background-color:#ebfb62;
+            color:black;
+            font-weight:bold;
+            font-size:20px;
+            text-align:center;
+            padding:12px;
+        }
+        /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ebfb62; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b4c804; 
+}     
+    .bodyContent {
+        width:80%;
+        margin-right:auto;
+        margin-left:auto;
+    }  
+    /*
+        Light blue: #9faeec
+        Yellow: #d8a013
+        Pink: #fea9e3
+        Manilla: #f3ecda
+        Neon yellow: #ebfb62
+        Neon pink: #fa6de5
+    */
+    .backFade {
+        background-color:rgba(159, 174, 236,0.4);
+        border-radius:22px;
+    }
+    .backFade2 {
+        background-color:rgba(216, 160, 19,0.4);
+        border-radius:22px;
+    }
+    .backFade3 {
+        background-color:rgba(254, 169, 227,0.4);
+        border-radius:22px;
+    }
+    .backFade4 {
+        background-color:rgba(243, 236, 218,0.4);
+        border-radius:22px;
+    }
         .storeImg {
             transform:rotateY(180deg);
             width:50%;
@@ -109,6 +218,7 @@
             background-size:cover;
             background-position:center;
             padding:200px 0px;
+            cursor:pointer;
         }
         .shopDemoI:hover {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -142,7 +252,7 @@
             cursor:pointer;
         }
         .storeListing {
-            background-color:#39e600;
+            position:relative;
             display:flex;
             flex-direction:row;
             flex-wrap:wrap;
@@ -150,9 +260,10 @@
             justify-content:space-evenly;
         }
         .storeItem {
-            background-color:white;
             width:340px;
-            padding:4px;
+            background-color:white;
+            border-radius:20px;
+            cursor:pointer;
         }
         .storeBImg {
             width:100%;
@@ -165,16 +276,15 @@
             overflow-y:hidden;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+        .bodyText {
+            font-family: 'Lobster Two', cursive;
+            padding:6px;
+        }
         .bodyText h3 {
             font-size:30px;
             margin:0px;
             padding:6px;
-        }
-        .bodyRow {
-            font-size:26px;
-            font-style:itaic;
-            margin:0px;
-            padding:6px;
+            font-style:italic;
         }
         .bodyRow {
             display:grid;
@@ -182,6 +292,9 @@
             justify-content:space-between;
             align-content:center;
             width:100%;
+            font-size:26px;
+            margin:0px;
+            padding:6px;
         }
         .storeBtn {
             font-size:16px;
@@ -189,63 +302,357 @@
             box-sizing:border-box;
             margin-right:10px;
         }
+        .popUp {
+            position:relative;
+            width:100%;
+            padding:10px;
+            border-radius:20px;
+            background-color:white;
+            display:none;
+        }
+        .detailsBody {
+            font-family: 'Lobster Two', cursive;
+            padding:10px;
+            font-size:26px;
+        }
+        .detailsBody h3, .detailsBody h4 {
+            margin:4px;
+        }
+        .detailsBody h3 {
+            margin-bottom:10px;
+        }
+        .rightArrow {
+            font-size:100px;
+            font-weight:bold;
+            color:#fa6de5;
+            font-family: 'Patua One', cursive;
+        }
+        .close {
+            position:absolute;
+            font-family: 'Patua One', cursive;
+            top:10px;
+            left:30px;
+            font-size:30px;
+            font-weight:bold;
+            color:#fa6de5;
+            user-select:none;
+        }
+        .close:hover {
+            cursor:pointer;
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
         <ul class="navbarList">
-            <li><a href="index.html" class="navLink"><img src="" class="navLogo" alt="RC&nbsp;">RetroCycle</a></li>
-            <li><a href="index.html" class="navLink">Home</a></li>
+            <li><a href="index.html" class="navLink"><img src="Assets/logo2.png" class="navLogo" alt="RC&nbsp;"></a></li>
+            <li><a href="index.html" class="navLink">RetroCycle</a></li>
             <li><a href="store.html" class="navLink">Store</a></li>
             <li><a href="howToHelp.html" class="navLink">How You Can Help</a></li>
         </ul>
     </div>
-    <div class="bodyC" style="background-image:linear-gradient(to bottom, #ffffcc, #9fff80);">
+    <div class="bodyContent">    
+    <div class="bodyC introBodyC">
         <div class="bodyGrid">
             <div class="bodyBodyC">
                 <h1>Store</h1>
-                <p>Our upcycled products are reasonably priced to ensure that you can experience our environmentally-friendly solution without feeling a financial burden as a result.</p>
+                <p>Our upcycled products are reasonably priced to ensure that you can experience our 
+                    environmentally-friendly solution without feeling a financial burden as a result.</p>
             </div>
-            <div class="bodyImgC"><img src="Assets/cart.png" class="introImg storeImg" alt="Store image"></div>
+            <div class="bodyImgC"><img src="Assets/cart.png" loading="lazy" class="introImg" alt="Intro image"></div>
         </div>
     </div>
-    <div class="storeListing">
-        <div class="storeItem">
+    <div class="storeListing" style="margin-bottom:100px;">
+        <div class="popUp" id="popUp">
+            <div class="close">&lt; Back To Shop</div>
+            <div class="bodyC" style="margin-top:10px;">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>Bracelet</h1>
+                        <p>Sales pitch about our bracelet...
+                        </p>
+                    </div>
+                    <div class="detailsBody" style="color:black;">
+                        <img src="Assets/logo.png" class="introImg" loading="lazy" alt="Intro image">
+                        <h4>Rating: <span style="font-weight:bold;font-family:none;color:#ffcc00;">
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                        </span></h4>
+                        <h3>Price: $19.99</h3>
+                        <button class="shopDemoBtn storeBtn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>How It's Made</h1>
+                        <p>To create your bracelet, we first...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyImgGrid">
+                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                    <div class="rightArrow">&nbsp;</div>
+                    <div class="rightArrow">&#62;</div>
+                    <div class="rightArrow">&nbsp;</div>
+                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>Reviews</h1>
+                        <p style="font-style:normal;font-weight:normal;"><span style="font-weight:bold;">(Verified Customer)</span><br>
+                            This is the greatest bracelet that I have ever received - and to think 
+                            that they used to be an old record? What they do at RetroCycle is amazing. I 
+                            cnanot rate them highly enough!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popUp" id="popUp2">
+            <div class="close">&lt; Back To Shop</div>
+            <div class="bodyC" style="margin-top:10px;">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>Earrings</h1>
+                        <p>Sales pitch about our earrings...
+                        </p>
+                    </div>
+                    <div class="detailsBody" style="color:black;">
+                        <img src="Assets/logo.png" class="introImg" loading="lazy" alt="Intro image">
+                        <h4>Rating: <span style="font-weight:bold;font-family:none;color:#ffcc00;">
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                        </span></h4>
+                        <h3>Price: $19.99</h3>
+                        <button class="shopDemoBtn storeBtn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>How It's Made</h1>
+                        <p>To create your earrings, we first...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyImgGrid">
+                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                    <div class="rightArrow">&nbsp;</div>
+                    <div class="rightArrow">&#62;</div>
+                    <div class="rightArrow">&nbsp;</div>
+                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>Reviews</h1>
+                        <p style="font-style:normal;font-weight:normal;"><span style="font-weight:bold;">(Verified Customer)</span><br>
+                            This is the greatest pair of earrings that I have ever received - and to think 
+                            that they used to be an old record? What they do at RetroCycle is amazing. I 
+                            cnanot rate them highly enough!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popUp" id="popUp3">
+            <div class="close">&lt; Back To Shop</div>
+            <div class="bodyC" style="margin-top:10px;">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>Handbag</h1>
+                        <p>Sales pitch about our handbag...
+                        </p>
+                    </div>
+                    <div class="detailsBody" style="color:black;">
+                        <img src="Assets/logo.png" class="introImg" loading="lazy" alt="Intro image">
+                        <h4>Rating: <span style="font-weight:bold;font-family:none;color:#ffcc00;">
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                        </span></h4>
+                        <h3>Price: $44.99</h3>
+                        <button class="shopDemoBtn storeBtn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>How It's Made</h1>
+                        <p>To create your handbag, we first...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyImgGrid">
+                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                    <div class="rightArrow">&nbsp;</div>
+                    <div class="rightArrow">&#62;</div>
+                    <div class="rightArrow">&nbsp;</div>
+                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>Reviews</h1>
+                        <p style="font-style:normal;font-weight:normal;"><span style="font-weight:bold;">(Verified Customer)</span><br>
+                            This is the greatest handbag that I have ever received - and to think 
+                            that they used to be an old record? What they do at RetroCycle is amazing. I 
+                            cnanot rate them highly enough!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popUp" id="popUp4">
+            <div class="close">&lt; Back To Shop</div>
+            <div class="bodyC" style="margin-top:10px;">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>Wallet</h1>
+                        <p>Sales pitch about our wallet...
+                        </p>
+                    </div>
+                    <div class="detailsBody" style="color:black;">
+                        <img src="Assets/logo.png" class="introImg" loading="lazy" alt="Intro image">
+                        <h4>Rating: <span style="font-weight:bold;font-family:none;color:#ffcc00;">
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                            <i class="fa fa-solid fa-star"></i>
+                        </span></h4>
+                        <h3>Price: $34.99</h3>
+                        <button class="shopDemoBtn storeBtn">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>How It's Made</h1>
+                        <p>To create your wallet, we first...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyImgGrid">
+                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                    <div class="rightArrow">&nbsp;</div>
+                    <div class="rightArrow">&#62;</div>
+                    <div class="rightArrow">&nbsp;</div>
+                    <img src="Assets/logo.png" class="popImg" loading="lazy" alt="Item image">
+                </div>
+            </div>
+            <div class="bodyC">
+                <div class="bodyGrid">
+                    <div class="bodyBodyC" style="color:black;">
+                        <h1>Reviews</h1>
+                        <p style="font-style:normal;font-weight:normal;"><span style="font-weight:bold;">(Verified Customer)</span><br>
+                            This is the greatest wallet that I have ever received - and to think 
+                            that they used to be an old record? What they do at RetroCycle is amazing. I 
+                            cnanot rate them highly enough!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="storeItem" id="item1">
             <div class="bodySImgC"><img src="Assets/bracelet.jpg" class="storeBImg" loading="lazy" alt="Item image"></div>
             <div class="bodyText">
                 <h3>Bracelet</h3>
                 <div class="bodyRow"><div>$19.99 </div><button class="shopDemoBtn storeBtn">Add To Cart</button></div>
             </div>
         </div>
-        <div class="storeItem">
+        <div class="storeItem" id="item2">
             <div class="bodySImgC"><img src="Assets/earring.jpg" class="storeBImg" loading="lazy" alt="Item image"></div>
             <div class="bodyText">
                 <h3>Earrings</h3>
                 <div class="bodyRow"><div>$19.99 </div><button class="shopDemoBtn storeBtn">Add To Cart</button></div>
             </div>
         </div>
-        <div class="storeItem">
+        <div class="storeItem" id="item3">
             <div class="bodySImgC"><img src="Assets/handbag.jpg" class="storeBImg" loading="lazy" alt="Item image"></div>
             <div class="bodyText">
                 <h3>Handbag</h3>
                 <div class="bodyRow"><div>$44.99 </div><button class="shopDemoBtn storeBtn">Add To Cart</button></div>
             </div>
         </div>
-        <div class="storeItem">
+        <div class="storeItem" id="item4">
             <div class="bodySImgC"><img src="Assets/wallet.jpg" class="storeBImg" loading="lazy" alt="Item image"></div>
             <div class="bodyText">
                 <h3>Wallet</h3>
                 <div class="bodyRow"><div>$34.99 </div><button class="shopDemoBtn storeBtn">Add To Cart</button></div>
             </div>
         </div>
-    </div>
+    </div>  
+</div>
+<div class="footer">
+    Copyright © 2022 RetroCycle
+</div>
 </body>
 <script>
-    var navbarLI = document.querySelector(".navbarList li");
-    $(".navbar").css("height", navbarLI.offsetHeight+1);
-    $(".shopDemoI").on("click", function() {
-        window.location.href="store.html";
-    });
+        var navbarLI = document.querySelector(".navbarList li");
+    $(".navbar").css("height", navbarLI.offsetHeight);
+    window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.querySelector(".navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+$(".close").on("click", function() {
+    $(".popUp").css("display","none");
+    $(".storeItem").css("display","block");
+});
+$(".storeItem").on("click", function() {
+    $(".storeItem").css("display","none");
+    switch($(this).attr("id")) {
+        case "item1":
+        $("#popUp").css("display","block");
+        break;
+        case "item2":
+        $("#popUp2").css("display","block");
+        break;
+        case "item3":
+        $("#popUp3").css("display","block");
+        break;
+        case "item4":
+        $("#popUp4").css("display","block");
+        break;
+    }
+});
 </script>
 
 </html>
