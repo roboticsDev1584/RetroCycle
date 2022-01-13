@@ -102,7 +102,7 @@
             font-size:26px;
             margin:10px 0px 0px;
             font-weight:bold;
-            text-align:justify;
+            text-align:left;
             padding-right:12px;
         }
         .introImg {
@@ -345,12 +345,190 @@
         .close:hover {
             cursor:pointer;
         }
+        .fa-bars {
+        display:none;
+        font-size:40px;
+    }
+    .fa-bars:hover {
+        cursor:pointer;
+    }
+    .mobileNavbar {
+            width:100%;
+            background-color:white;
+            display:none;
+        }
+    .mobileNavbarList {
+        list-style-type:none;
+            margin:0;
+            width:100%;
+            font-family: 'Lobster Two', cursive;
+        }
+        .mobileNavbarList li {
+            float:left;
+            margin:0;
+            padding:20px;
+            color:black;
+            font-size:24px;
+            background-color:rgba(0,0,0,0);
+            transition:background-color 0.5s;
+        }
+        .mobileNavbarList li:hover {
+            background-color:#ebfb62;
+        }
+        @media screen and (max-width:600px) {
+        .fa-bars {
+            display:inline;
+        }
+        .navLogo, .navbarList li {
+            display:none;
+        }
+        .navbarList li:first-child {
+            display:block;
+        }
+        .mobileNavbarList li {
+            margin-top:-1px;
+            background-color:white;
+            width:100%;
+        }
+    }
+    /*Shop page RWD*/
+    @media screen and (max-width:1100px) {
+        .bodyContent {
+            width:90%;
+        }
+    }
+    @media screen and (max-width:940px) {
+        .bodyContent {
+            width:96%;
+        }
+        .bodyBodyC p {
+            font-size:22px !important;
+        }
+    }
+    @media screen and (max-width:800px) {
+        #actualIntroImg {
+           display:none;
+        }
+        .bodyGrid {
+            display:block;
+        }
+        .bodyBodyC:first-child {
+            text-align:center !important;
+        }
+        #firstBodyBodyCP {
+            text-align:center !important;
+        }
+        .bodyContent {
+            width:100%;
+        }
+        .bodyBodyC h1 {
+            text-align:center;
+        }
+        ::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover {
+            display:none;
+        }
+    }
+    @media screen and (max-width:700px) {
+        .bodyBodyC p {
+            font-size:18px !important;
+        }
+        .bodyBodyC h1 {
+            font-size:70px !important;
+        }
+        #firstBodyBodyCP {
+            font-size:22px !important;
+        }
+        .bodyBodyC:first-child {
+            font-size:80px !important;
+        }
+        .bodyC {
+            margin-bottom:80px !important;
+            padding:50px 0px;
+        }
+        .bodyC:first-child {
+            margin-bottom:0px !important;
+        }
+        .popImg {
+            width:150px;
+        }
+    }
+    @media screen and (max-width:600px) {
+        .fa-bars {
+            display:inline;
+        }
+        .navLogo, .navbarList li {
+            display:none;
+        }
+        .navbarList li:first-child {
+            display:block;
+        }
+        .mobileNavbarList li {
+            margin-top:-1px;
+            background-color:white;
+            width:100%;
+        }
+        .popImg {
+            width:120px;
+        }
+        .popUp .bodyC {
+            padding:20px 0px;
+            margin:0 !important;
+        }
+        .largeTitle {
+            margin-top:20px !important;
+        }
+    }
+    @media screen and (max-width:500px) {
+        #missionParagraph {
+            font-size:16px !important;
+            width:100% !important;
+        }
+        .bodyC:nth-child(2) {
+            padding:20px 0px;
+            width:100% !important;
+        }
+    }
+    @media screen and (max-width:435px) {
+        .bodyBodyC h1 {
+            font-size:50px !important;
+        }
+        .popImg {
+            width:90px;
+        }
+        .bodyC {
+            padding:40px 0px;
+        }
+        .popUp {
+            padding:5px;
+        }
+    }
+    @media screen and (max-width:385px) {
+        .bodyBodyC h1 {
+            font-size:30px !important;
+        }
+        .mainTitle h1 {
+            font-size:40px !important;
+        }
+        .popImg {
+            width:70px;
+        }
+        .rightArrow {
+            font-size:80px;
+        }
+    }
     </style>
 </head>
 <body>
     <div class="navbar">
         <ul class="navbarList">
-            <li><a href="index.html" class="navLink"><img src="Assets/logo2.png" class="navLogo" alt="RC&nbsp;"></a></li>
+            <li><i class="fa fa-solid fa-bars"></i><a href="index.html" class="navLink"><img src="Assets/logo2.png" class="navLogo" alt="RC&nbsp;"></a></li>
+            <li><a href="index.html" class="navLink">RetroCycle</a></li>
+            <li><a href="store.html" class="navLink">Store</a></li>
+            <li><a href="howToHelp.html" class="navLink">How You Can Help</a></li>
+        </ul>
+    </div>
+    <div class="mobileNavbar">
+        <ul class="mobileNavbarList">
             <li><a href="index.html" class="navLink">RetroCycle</a></li>
             <li><a href="store.html" class="navLink">Store</a></li>
             <li><a href="howToHelp.html" class="navLink">How You Can Help</a></li>
@@ -359,12 +537,12 @@
     <div class="bodyContent">    
     <div class="bodyC introBodyC">
         <div class="bodyGrid">
-            <div class="bodyBodyC">
+            <div class="bodyBodyC mainTitle">
                 <h1>Store</h1>
                 <p>Our upcycled products are reasonably priced to ensure that you can experience our 
                     environmentally-friendly solution without feeling a financial burden as a result.</p>
             </div>
-            <div class="bodyImgC"><img src="Assets/cart.png" loading="lazy" class="introImg" alt="Intro image"></div>
+            <div class="bodyImgC" id="actualIntroImg"><img src="Assets/cart.png" loading="lazy" class="introImg" alt="Intro image"></div>
         </div>
     </div>
     <div class="storeListing" style="margin-bottom:100px;">
@@ -372,7 +550,7 @@
             <div class="close">&lt; Back To Shop</div>
             <div class="bodyC" style="margin-top:10px;">
                 <div class="bodyGrid">
-                    <div class="bodyBodyC" style="color:black;">
+                    <div class="bodyBodyC largeTitle" style="color:black;">
                         <h1>Go-Go Boots</h1>
                         <p>Sales pitch about our go-go boots...
                             <br><br>For every pair of Go-Go boots that you buy, you save 200 plastic bags from going in a landfill.
@@ -427,7 +605,7 @@
             <div class="close">&lt; Back To Shop</div>
             <div class="bodyC" style="margin-top:10px;">
                 <div class="bodyGrid">
-                    <div class="bodyBodyC" style="color:black;">
+                    <div class="bodyBodyC largeTitle" style="color:black;">
                         <h1>Tea Can Earrings</h1>
                         <p>Sales pitch about our tea can earrings...
                             <br><br>For every pair of tea can earrings that you buy, you save 25 arizona tea cans from going in a landfill.
@@ -482,7 +660,7 @@
             <div class="close">&lt; Back To Shop</div>
             <div class="bodyC" style="margin-top:10px;">
                 <div class="bodyGrid">
-                    <div class="bodyBodyC" style="color:black;">
+                    <div class="bodyBodyC largeTitle" style="color:black;">
                         <h1>VHS Crossbody Purse</h1>
                         <p>Sales pitch about our handbag...
                             <br><br>For every crossbody purse that you buy, you save 30 VHS tapes from going in a landfill.
@@ -537,7 +715,7 @@
             <div class="close">&lt; Back To Shop</div>
             <div class="bodyC" style="margin-top:10px;">
                 <div class="bodyGrid">
-                    <div class="bodyBodyC" style="color:black;">
+                    <div class="bodyBodyC largeTitle" style="color:black;">
                         <h1>Casette Tape Wallet</h1>
                         <p>Sales pitch about our wallet...
                             <br><br>For every wallet that you buy, you save 20 casette tapes from going in a landfill.
@@ -591,7 +769,7 @@
         <div class="popUp" id="popUp5">
             <div class="close">&lt; Back To Shop</div>
             <div class="bodyC" style="margin-top:10px;">
-                <div class="bodyGrid">
+                <div class="bodyGrid largeTitle">
                     <div class="bodyBodyC" style="color:black;">
                         <h1>Plastic Bag Earrings</h1>
                         <p>Sales pitch about our plastic bag earrings...
@@ -690,19 +868,9 @@ var navbarLI = document.querySelector(".navbarList li");
 var navbar = document.querySelector(".navbar");
 var storeImages = document.getElementsByClassName("storeBImg");
 var sticky = navbar.offsetTop;
-
-/*function recenterImages() {
-    for (var index=0; index<storeImages.length; index++) {
-        if (storeImages[index].offsetHeight > 300) {
-            storeImages[index].style.marginTop = `${(storeImages[index].offsetHeight-300)/16}px`;
-        }
-        else {
-            storeImages[index].style.marginTop = `${(300-storeImages[index].offsetHeight)/16}px`;
-        }
-    }
-}*/
+var mobileNavbar = false;
 function stickyNav() {
-  if (window.pageYOffset >= sticky) {
+  if (window.pageYOffset >= sticky+1) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
@@ -737,6 +905,19 @@ $(".storeItem").on("click", function() {
         $("#popUp5").css("display","block");
         break;
     }
+});
+$(".fa-bars").on("click", function() {
+    if (mobileNavbar) { 
+        $(".mobileNavbar").css("display","none"); 
+        $(".bodyContent").css("display","block");
+        $(".footer").css("display","block");
+    }
+    else { 
+        $(".mobileNavbar").css("display","block"); 
+        $(".bodyContent").css("display","none");
+        $(".footer").css("display","none");
+    }
+    mobileNavbar = !mobileNavbar;
 });
 </script>
 
